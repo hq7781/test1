@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="r8d-MA-sd5"/>
                         <viewControllerLayoutGuide type="bottom" id="jzx-We-jeA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BeD-hj-PUV">
+                    <view key="view" contentMode="scaleToFill" id="BeD-hj-PUV" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-Cf-Lca">
-                                <rect key="frame" x="1" y="523" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Item" id="3bI-q4-j7g" userLabel="Step1"/>
                                     <barButtonItem title="Item" id="NmY-ET-dnY" userLabel="Step2"/>
@@ -75,8 +75,9 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a numbers" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-5M-FMt">
                                 <rect key="frame" x="132" y="204" width="158" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
+                                    <action selector="backgroundClick:" destination="x5A-6p-PRh" eventType="editingDidEnd" id="wQT-3Q-eOq"/>
                                     <action selector="textFieldDoneEditing:" destination="x5A-6p-PRh" eventType="editingDidEndOnExit" id="J69-QZ-HyV"/>
                                 </connections>
                             </textField>
@@ -85,6 +86,11 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="backgroundClick:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ELK-Ms-Kr7"/>
+                            <action selector="backgroundClick:" destination="x5A-6p-PRh" eventType="touchDown" id="SgG-ag-wW2"/>
+                            <action selector="textFieldDoneEditing:" destination="x5A-6p-PRh" eventType="touchDown" id="7QV-6f-KYh"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="myButton" destination="wPX-vp-R4i" id="FLv-4g-y6j"/>

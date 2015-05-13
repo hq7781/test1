@@ -16,8 +16,7 @@
 
 @synthesize statusText;
 @synthesize nameField;
-@synthesize numberFiled;
-
+@synthesize numberField;
 
 
 #pragma mark - fucntions: 
@@ -39,8 +38,8 @@
 //数字键盘状态的关闭处理
 -(IBAction)backgroundClick:(id)sender{
     [nameField resignFirstResponder];
-    [numberFiled resignFirstResponder];
-    
+    [numberField resignFirstResponder];
+
 }
 
 #pragma mark - Lift cycle

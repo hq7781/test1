@@ -19,7 +19,7 @@
 
 @property (retain, nonatomic) UILabel *statusText;
 @property (retain, nonatomic) UITextField *nameField;
-@property (retain, nonatomic) UITextField *numberFiled;
+@property (retain, nonatomic) UITextField *numberField;
 
 // 左右键按下的时候响应方法
 - (IBAction)buttonPressed:(id)sender;
